@@ -21,14 +21,14 @@
     </header>
 
     <div class="voltar-container">
-        <a class="voltar" href="#" id="btn-voltar-galeria">
-            <img src="img/botao-home.png" alt="Voltar para Galeria" class="btn-galeria" />
+        <a class="voltar" href="#" id="btn-voltar-galeria" aria-label="Voltar para a lista da galeria">
+            <img src="img/botao-home.png" alt="" class="btn-galeria" />
             <span class="texto-voltar">Voltar</span>
         </a>
     </div>
 
     <main class="conteudo-galeria">
-        <section class="detalhe">
+        <section class="detalhe" aria-label="Detalhes da foto selecionada">
             <div class="detalhe-texto">
                 <h2 id="titulo-foto">Carregando...</h2>
                 <p id="desc1"></p>
@@ -37,21 +37,32 @@
             </div>
 
             <div class="detalhe-foto">
-                <div class="moldura-detalhe">
+                <button type="button" id="btn-abrir-lightbox" class="moldura-detalhe" aria-haspopup="dialog"
+                    aria-label="Ampliar foto">
                     <img id="imagem-destaque" src="" alt="" />
-                </div>
+                </button>
             </div>
         </section>
 
-        <nav class="navegacao">
-            <a href="#" id="btn-foto-anterior" aria-label="Anterior">
+        <nav class="navegacao" aria-label="Navegação entre fotos">
+            <a href="#" id="btn-foto-anterior" aria-label="Foto anterior">
                 <img src="img/botao-esquerda.png" alt="Seta Esquerda" class="btn-navegação" />
             </a>
-            <a href="#" id="btn-foto-proxima" aria-label="Próximo">
+            <a href="#" id="btn-foto-proxima" aria-label="Próxima foto">
                 <img src="img/botao-direita.png" alt="Seta Direita" class="btn-navegação" />
             </a>
         </nav>
     </main>
+
+    <div id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" class="lightbox-container">
+        <button id="btn-fechar-lightbox" aria-label="Fechar ampliação de foto">&times; Fechar</button>
+        <div class="lightbox-conteudo">
+            <button type="button" id="btn-zoom-lightbox" aria-label="Dar zoom nos detalhes da imagem"
+                aria-pressed="false">
+                <img id="imagem-ampliada" src="" alt="" />
+            </button>
+        </div>
+    </div>
 
     <script src="js/dados.js"></script>
     <script src="js/detalhe.js"></script>
