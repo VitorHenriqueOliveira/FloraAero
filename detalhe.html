@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FloraAero - Detalhes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="pagina-galeria">
+
+    <header class="topo">
+        <img src="img/hibisco.png" alt="Logo Hibisco" class="topo-logo" />
+        <h1>Galeria</h1>
+    </header>
+
+    <div class="voltar-container">
+        <a class="voltar" href="#" id="btn-voltar-galeria">
+            <img src="img/botao-home.png" alt="Voltar para Galeria" class="btn-galeria" />
+            <span class="texto-voltar">Voltar</span>
+        </a>
+    </div>
+
+    <main class="conteudo-galeria">
+        <section class="detalhe">
+            <div class="detalhe-texto">
+                <h2 id="titulo-foto">Carregando...</h2>
+                <p id="desc1"></p>
+                <p id="desc2"></p>
+                <p class="credito" id="credito-foto"></p>
+            </div>
+
+            <div class="detalhe-foto">
+                <div class="moldura-detalhe">
+                    <img id="imagem-destaque" src="" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <nav class="navegacao">
+            <a href="#" id="btn-foto-anterior" aria-label="Anterior">
+                <img src="img/botao-esquerda.png" alt="Seta Esquerda" class="btn-navegação" />
+            </a>
+            <a href="#" id="btn-foto-proxima" aria-label="Próximo">
+                <img src="img/botao-direita.png" alt="Seta Direita" class="btn-navegação" />
+            </a>
+        </nav>
+    </main>
+
+    <script src="js/dados.js"></script>
+    <script src="js/detalhe.js"></script>
+</body>
+
+</html>
